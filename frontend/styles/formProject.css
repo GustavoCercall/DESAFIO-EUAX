@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  align-self: center;
+  margin-top: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+form label {
+  font-size: 1.125rem;
+}
+
+#activity {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#activity h4 {
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+input[type='submit'],
+#buttonAct,
+input[value='Voltar'] {
+  font-size: 1.125rem;
+  font-weight: bold;
+  background-color: #3f00ff;
+  color: white;
+  border: none;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#buttonAct {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0;
+  align-self: center;
+}
+
+input[type='checkbox'] {
+  align-self: flex-start;
+}

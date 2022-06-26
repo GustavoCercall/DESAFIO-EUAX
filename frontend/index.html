@@ -6,11 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerenciador de Projetos</title>
+  <link rel="stylesheet" href="styles/listProjects.css">
 </head>
 
 <body>
-  <ul id="projects-list"></ul>
+  <main>
+    <h2 id="title">Listagem de projetos</h2>
+    <ul id="projects-list"></ul>
+    <input type="button" value="Adicionar Projeto" onclick="goToProject()">
+  </main>
   <script src="scripts/getProjects.js"></script>
+  <script>
+    function goToProject() {
+      window.location.href = '/frontend/createProject.html';
+    }
+  </script>
 </body>
 
 </html>

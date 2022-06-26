@@ -7,30 +7,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Criar Novo Projeto</title>
+  <link rel="stylesheet" href="styles/formProject.css">
 </head>
 
 <body>
-  <form action="" method="post" id="form-projects">
-    <label for="projectName">Nome do Projeto</label>
-    <input type="text" name="projectName" id="projectName">
-    <label for="startDate">Data de inicio</label>
-    <input type="date" name="startDate" id="startDate">
-    <label for="endDate">Data de término</label>
-    <input type="date" name="endDate" id="endDate">
-    <div>
-      <label for="activityName">Nome do Atividade</label>
-      <input type="text" name="activityName" id="activityName">
-      <label for="startDateActivity">Data de inicio</label>
-      <input type="date" name="startDateActivity" id="startDateActivity">
-      <label for="endDateeActivity">Data de término</label>
-      <input type="date" name="endDateActivity" id="endDateActivity">
-      <label for="activeActivity">Ativa</label>
-      <input type="checkbox" name="activeActivity" id="activeActivity">
-    </div>
-    <input type="submit" value="Criar">
-  </form>
+  <main>
+    <h2 id="title">Adicionar projeto</h2>
+    <form action="" method="post" id="form-projects">
+      <label for="projectName">Nome do Projeto</label>
+      <input type="text" name="projectName" id="projectName">
+      <label for="startDate">Data de inicio</label>
+      <input type="date" name="startDate" id="startDate">
+      <label for="endDate">Data de término</label>
+      <input type="date" name="endDate" id="endDate">
+      <input type="button" value="+" onclick="showActivity()" id="buttonAct">
+      <div id="activity" style="opacity: 0;">
+        <h4>Adicionar atividade</h4>
+        <label for="activityName">Nome do Atividade</label>
+        <input type="text" name="activityName" id="activityName">
+        <label for="startDateActivity">Data de inicio</label>
+        <input type="date" name="startDateActivity" id="startDateActivity">
+        <label for="endDateeActivity">Data de término</label>
+        <input type="date" name="endDateActivity" id="endDateActivity">
+        <label for="activeActivity">Ativa</label>
+        <input type="checkbox" name="activeActivity" id="activeActivity">
+      </div>
+      <input type="submit" value="Adicionar">
+    </form>
+    <input type="button" value="Voltar" onclick="goBack()">
+  </main>
 
   <script src="scripts/postProject.js"></script>
+  <script>
+    function showActivity() {
+      const btn = document.querySelector('#buttonAct');
+      const activity = document.querySelector('#activity');
+      activity.style.opacity = '1';
+      btn.style.display = 'none';
+    }
+    function goBack() {
+      window.location.href = '/frontend';
+    }
+  </script>
 </body>
 
 </html>

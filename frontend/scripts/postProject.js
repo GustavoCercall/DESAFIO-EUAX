@@ -18,12 +18,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         nameProject: form.projectName.value,
         startProject: form.startDate.value,
         endProject: form.endDate.value,
-        activitiesProject: {
-          nameActivity: form.activityName.value,
-          startActivity: form.startDateActivity.value,
-          endActivity: form.endDateActivity.value,
-          active: form.activeActivity.checked,
-        },
+        activitiesProject: [
+          {
+            nameActivity: form.activityName.value || '',
+            startActivity: form.startDateActivity.value || '',
+            endActivity: form.endDateActivity.value || '',
+            active: form.activeActivity.checked || false,
+          },
+        ],
       };
       console.log(data);
       const projects = await postProjects(data);
