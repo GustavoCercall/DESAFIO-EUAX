@@ -4,7 +4,6 @@ export default class ProjectService {
   }
 
   getAll() {
-    console.log('service');
     return this.projectRepository.getAll();
   }
 

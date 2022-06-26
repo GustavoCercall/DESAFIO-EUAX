@@ -14,7 +14,6 @@ export default class ProjectRepository {
   }
 
   getAll() {
-    console.log('repository');
     return this.#currentFileContent();
   }
 
