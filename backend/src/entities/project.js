@@ -5,6 +5,6 @@ export default class Project {
     this.nameProject = nameProject;
     this.startProject = startProject;
     this.endProject = endProject;
-    this.activities = activitiesProject;
+    this.activitiesProject = activitiesProject;
   }
 }

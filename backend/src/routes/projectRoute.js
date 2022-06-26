@@ -9,6 +9,23 @@ const routes = ({ projectService }) => ({
     response.write(JSON.stringify(projects));
     return response.end();
   },
+  '/projects:post': async (request, response) => {
+    const data = await once(request, 'data'); // Salvando um post.
+    const item = JSON.parse(data);
+    const project = new Project(item);
+
+    const id = await projectService.create(project);
+
+    response.writeHead(201, DEFAULT_HEADER);
+    response.write(
+      JSON.stringify({
+        id,
+        success: 'Projeto criado com sucesso!!',
+      })
+    );
+
+    return response.end();
+  },
 });
 
 export { routes };

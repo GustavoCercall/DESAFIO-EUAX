@@ -5,6 +5,6 @@ const PORT = process.env.PORT || 3000;
 
 const server = http
   .createServer(handler)
-  .listen(PORT, () => console.log(`server is running at  ${PORT}`));
+  .listen(PORT, () => console.log(`server is running at  ${PORT}`)); // gerando o servidor.
 
 export { server };
