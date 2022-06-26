@@ -1,0 +1,17 @@
+[
+  {
+    "nameProject": "Projeto1",
+    "idProject": "1",
+    "startProject": "2022-06-21",
+    "endProject": "2022-07-01",
+    "activitiesProject": [
+      {
+        "nameActivity": "Atividade1",
+        "idActivity": "1",
+        "startActivity": "2022-06-26",
+        "endActivity": "2022-07-01",
+        "active": true
+      }
+    ]
+  }
+]
