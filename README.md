@@ -30,8 +30,8 @@ Projeto realizado para  processo seletivo do Grupo EUAX - 4ºEdição
 - Abrir o arquivo `frontend/index.html` em qualquer navegador.
 
 # Como usar:
-Passo 1: Clique em `Adicionar Projeto`.
-Passo 2: Preencha todos os campos do projeto.
-Passo 3: Clique no ícone `+` para adicionar uma ou mais atividades.
-Passo 4: Clique em `Adicionar` para salvar seu projeto.
-Passo 5: Clique em `Voltar`, em seguida clique em cima do nome do projeto para ver seus dados listados.
+- Passo 1: Clique em `Adicionar Projeto`.
+- Passo 2: Preencha todos os campos do projeto.
+- Passo 3: Clique no ícone `+` para adicionar uma ou mais atividades.
+- Passo 4: Clique em `Adicionar` para salvar seu projeto.
+- Passo 5: Clique em `Voltar`, em seguida clique em cima do nome do projeto para ver seus dados listados.
