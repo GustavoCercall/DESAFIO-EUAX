@@ -26,6 +26,24 @@ const routes = ({ projectService }) => ({
 
     return response.end();
   },
+  '/projects:options': async (request, response) => {
+    response.writeHead(204, DEFAULT_HEADER);
+    return response.end();
+  },
+  '/projects:delete': async (request, response) => {
+    let data = await once(request, 'data'); // pegando o objeto que vem do response `data`
+    const { id } = JSON.parse(data); // pegando o id do projeto de dentro do `data`
+    response.writeHead(201, DEFAULT_HEADER);
+    const _id = await projectService.deleteOne(id);
+
+    response.write(
+      JSON.stringify({
+        _id,
+        success: 'Projeto excluído com sucesso!!',
+      })
+    );
+    return response.end();
+  },
 });
 
 export { routes };

@@ -35,7 +35,7 @@ form label {
   font-size: 1.125rem;
 }
 
-#activity {
+#activity, #activity div {
   display: flex;
   flex-direction: column;
   width: 100%;

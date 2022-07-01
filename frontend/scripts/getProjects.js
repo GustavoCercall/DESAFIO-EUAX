@@ -46,6 +46,7 @@ const renderProject = (project) => `
               <th>ID Projeto</th>
               <th>Data Inicio</th>
               <th>Data Fim</th>
+              <th> </th>
             </tr>
           </thead>
           <tbody class="dataTable">
@@ -53,6 +54,7 @@ const renderProject = (project) => `
               <td>${project.idProject}</td>
               <td>${new Date(project.startProject).toLocaleDateString()}</td>
               <td>${new Date(project.endProject).toLocaleDateString()}</td>
+              <td><button id="buttonDelete" onclick="deleteProjects('${project.idProject}')">X</button></td>
             </tr>
           </tbody>
         </table>

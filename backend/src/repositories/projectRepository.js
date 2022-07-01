@@ -25,4 +25,11 @@ export default class ProjectRepository {
 
     return data.id;
   }
+
+  async delete(id) {
+    const currentFile = await this.#currentFileContent();
+    const newFile = currentFile.filter((item) => item.idProject !== id); // removendo o projeto da lista.
+    await writeFile(this.file, JSON.stringify(newFile)); // removendo o projeto do arquivo.
+    return id;
+  }
 }

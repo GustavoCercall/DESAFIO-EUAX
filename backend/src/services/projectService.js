@@ -10,4 +10,8 @@ export default class ProjectService {
   create(data) {
     return this.projectRepository.create(data);
   }
+
+  deleteOne(id) {
+    return this.projectRepository.delete(id);
+  }
 }

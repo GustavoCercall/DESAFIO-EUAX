@@ -14,18 +14,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     'submit',
     async (event) => {
       event.preventDefault();
+      let nrActivity = activity.childNodes.length;
+      const activitiesProject = [];
+      for (let i = 0; i < nrActivity; i++) {
+        const activity = {};
+        activity.nameActivity = document.querySelector(`#activityName${i}`).value
+        activity.startActivity = document.querySelector(`#startDateActivity${i}`).value ;
+        activity.endActivity = document.querySelector(`#endDateActivity${i}`).value ;
+        activity.activeActivity = document.querySelector(`#activeActivity${i}`).value | false;
+        activitiesProject.push(activity);
+      }
       const data = {
         nameProject: form.projectName.value,
         startProject: form.startDate.value,
         endProject: form.endDate.value,
-        activitiesProject: [
-          {
-            nameActivity: form.activityName.value || '',
-            startActivity: form.startDateActivity.value || '',
-            endActivity: form.endDateActivity.value || '',
-            active: form.activeActivity.checked || false,
-          },
-        ],
+        activitiesProject: activitiesProject
       };
       console.log(data);
       const projects = await postProjects(data);
